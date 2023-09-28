@@ -20,7 +20,7 @@ const validation_1 = require("../../helpers/validation");
 const imagesRouter = express_1.default.Router();
 imagesRouter.get('/images', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const queryParams = req.query;
-    const { fileName, width: thumbWidthStr, height: thumbHeightStr, } = queryParams;
+    const { fileName, width: thumbWidthStr, height: thumbHeightStr } = queryParams;
     try {
         (0, validation_1.paramsValidator)(fileName, thumbWidthStr, thumbHeightStr);
     }
@@ -44,7 +44,7 @@ imagesRouter.get('/images', (req, res) => __awaiter(void 0, void 0, void 0, func
                 imagePath,
                 thumbPath,
                 thumbWidth: thumbWidthNumber,
-                thumbHeight: thumbHeightNumber,
+                thumbHeight: thumbHeightNumber
             });
             return res.sendFile(thumbPath);
         }
