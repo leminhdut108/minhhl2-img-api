@@ -11,7 +11,7 @@ it('expect imageProcessor not throw any error', () => {
       imagePath,
       thumbPath,
       thumbWidth: 400,
-      thumbHeight: 400,
+      thumbHeight: 400
     });
   }).not.toThrow();
 });

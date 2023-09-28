@@ -11,7 +11,7 @@ const imageProcessor = ({
   imagePath,
   thumbPath,
   thumbWidth,
-  thumbHeight,
+  thumbHeight
 }: ImageProcessorParams) => {
   return sharp(imagePath).resize(thumbWidth, thumbHeight).toFile(thumbPath);
 };

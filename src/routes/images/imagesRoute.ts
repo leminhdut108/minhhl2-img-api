@@ -17,7 +17,7 @@ imagesRouter.get('/images', async (req, res) => {
   const {
     fileName,
     width: thumbWidthStr,
-    height: thumbHeightStr,
+    height: thumbHeightStr
   } = queryParams;
   try {
     paramsValidator(fileName, thumbWidthStr, thumbHeightStr);
@@ -42,7 +42,7 @@ imagesRouter.get('/images', async (req, res) => {
         imagePath,
         thumbPath,
         thumbWidth: thumbWidthNumber,
-        thumbHeight: thumbHeightNumber,
+        thumbHeight: thumbHeightNumber
       });
       return res.sendFile(thumbPath);
     } catch (error) {
